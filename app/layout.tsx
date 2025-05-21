@@ -2,9 +2,10 @@ import type { Metadata } from "next";
 import { StackProvider, StackTheme } from "@stackframe/stack";
 import { stackServerApp } from "../stack";
 import "./globals.css";
+import { NuqsAdapter } from "nuqs/adapters/next/app";
 
 export const metadata: Metadata = {
-  title: "v0 App",
+  title: "Pesan Pay",
   description: "Created with v0",
   generator: "v0.dev",
 };
@@ -18,7 +19,11 @@ export default function RootLayout({
     <html lang="en">
       <body>
         <StackProvider app={stackServerApp}>
-          <StackTheme>{children}</StackTheme>
+          <StackTheme>
+            <NuqsAdapter>
+              {children}
+            </NuqsAdapter>
+          </StackTheme>
         </StackProvider>
       </body>
     </html>

@@ -2,16 +2,15 @@
 
 import type * as React from "react"
 import {
-  AudioWaveform,
-  BookOpen,
-  Bot,
-  Command,
-  Frame,
-  GalleryVerticalEnd,
-  Map,
-  PieChart,
+  BarChart3,
+  Wallet,
   Settings2,
-  SquareTerminal,
+  LayoutDashboard,
+  Webhook,
+  Code,
+  Building2,
+  Building,
+  CircleDollarSign,
 } from "lucide-react"
 
 import { NavMain } from "./nav-main"
@@ -30,17 +29,17 @@ const data = {
   teams: [
     {
       name: "Acme Inc",
-      logo: GalleryVerticalEnd,
+      logo: Building2,
       plan: "Enterprise",
     },
     {
       name: "Acme Corp.",
-      logo: AudioWaveform,
+      logo: Building,
       plan: "Startup",
     },
     {
       name: "Evil Corp.",
-      logo: Command,
+      logo: CircleDollarSign,
       plan: "Free",
     },
   ],
@@ -48,70 +47,34 @@ const data = {
     {
       title: "Dashboard",
       url: "/dashboard",
-      icon: SquareTerminal
+      icon: LayoutDashboard
     },
     {
-      title: "Models",
-      url: "#",
-      icon: Bot,
-      items: [
-        {
-          title: "Genesis",
-          url: "#",
-        },
-        {
-          title: "Explorer",
-          url: "#",
-        },
-        {
-          title: "Quantum",
-          url: "#",
-        },
-      ],
+      title: "Balance",
+      url: "/dashboard/balance",
+      icon: Wallet
     },
     {
-      title: "Documentation",
-      url: "#",
-      icon: BookOpen,
-      items: [
-        {
-          title: "Introduction",
-          url: "#",
-        },
-        {
-          title: "Get Started",
-          url: "#",
-        },
-        {
-          title: "Tutorials",
-          url: "#",
-        },
-        {
-          title: "Changelog",
-          url: "#",
-        },
-      ],
+      title: "Transactions",
+      url: "/dashboard/transactions",
+      icon: BarChart3
     },
     {
       title: "Settings",
-      url: "#",
+      url: "/dashboard/settings/general",
       icon: Settings2,
       items: [
         {
           title: "General",
-          url: "/dashboard/settings",
+          url: "/dashboard/settings/general",
         },
         {
-          title: "Team",
-          url: "#",
+          title: "Webhooks",
+          url: "/dashboard/settings/webhooks",
         },
         {
-          title: "Billing",
-          url: "#",
-        },
-        {
-          title: "Limits",
-          url: "#",
+          title: "API",
+          url: "/dashboard/settings/api",
         },
       ],
     },
